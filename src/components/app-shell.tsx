@@ -63,7 +63,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </nav>
         <div className="ml-auto shrink-0 md:mt-auto md:ml-0 md:border-t md:border-line md:pt-3">
           <div className="hidden text-xs text-ink-2 md:block">
-            <b>{user.name}</b> {user.rank} · {user.isAdmin ? "관리자" : "담당자"}
+            <b>{user.name}</b> {user.rank} · {user.isSysadmin ? "시스템 관리자" : user.isAdmin ? "관리자" : "담당자"}
           </div>
           <button className="btn btn-sm mt-0 md:mt-2" onClick={() => void logout().then(() => router.replace("/login"))}>
             <LogOut size={13} /> 로그아웃

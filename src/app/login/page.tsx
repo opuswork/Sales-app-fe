@@ -40,9 +40,9 @@ function LoginForm() {
         {reason === "expired" && <div className="alert border-crit text-sm">로그인이 만료되었습니다. 다시 로그인해 주세요.</div>}
         <div>
           <label className="label" htmlFor="email">
-            이메일
+            로그인 ID 또는 이메일
           </label>
-          <input id="email" className="input" type="email" autoComplete="username" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <input id="email" className="input" type="text" autoComplete="username" value={email} onChange={(e) => setEmail(e.target.value)} required />
         </div>
         <div>
           <label className="label" htmlFor="password">
