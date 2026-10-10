@@ -7,7 +7,7 @@ const ACCESS_KEY = "sales-app-access";
 const REFRESH_KEY = "sales-app-refresh";
 const USER_KEY = "sales-app-user";
 
-export type Role = "ADMIN" | "STAFF";
+export type Role = "SYSADMIN" | "ADMIN" | "STAFF";
 export interface AuthUser {
   id: string;
   email: string;
@@ -16,6 +16,7 @@ export interface AuthUser {
   part: string;
   role: Role;
   isAdmin: boolean;
+  isSysadmin?: boolean;
   mustChangePw?: boolean;
   kakaoLinked?: boolean;
   capacity?: number;
