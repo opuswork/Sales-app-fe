@@ -210,8 +210,8 @@ function StaffForm({ init, constants: c, onClose, onSaved }: { init: Partial<Sta
         <Field label="이름">
           <input className="input" value={f.name ?? ""} onChange={(e) => set("name", e.target.value)} />
         </Field>
-        <Field label="로그인 이메일">
-          <input className="input" type="email" value={f.email ?? ""} onChange={(e) => set("email", e.target.value)} />
+        <Field label="로그인 ID 또는 이메일" hint="예: 전화번호 가운데 4자리. 공백 없이 3자 이상">
+          <input className="input" type="text" autoComplete="off" value={f.email ?? ""} onChange={(e) => set("email", e.target.value)} />
         </Field>
         <Field label={isNew ? "초기 비밀번호 (비우면 임시 발급)" : "새 비밀번호 (변경 시만)"}>
           <input className="input" type="password" value={f.password ?? ""} onChange={(e) => set("password", e.target.value)} />
